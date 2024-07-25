@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="projectcss.css">
+
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <ul class="menu">
+            <li><a href="#">HOME</a></li>
+
+            <li>
+                <a href="#">ABOUT</a>
+                <ul class="submenu">
+                    <li><a href="#">ACADEMICS</a></li>
+                    <li><a href="#">UNACADEMICS</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">PROJECT</a>
+                <ul class="submenu">
+                    <li><a href="#">PROJECT 1</a></li>
+                    <li><a href="#">PROJECT 2</a></li>
+                    <li><a href="#">PROJECT 3</a></li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">SOCIAL MEDIA</a>
+                <ul class="submenu">
+                    <li><a href="#">TWITTER</a></li>
+                    <li><a href="https://www.instagram.com/kar__ishma03?igsh=OHBjdHAwenhudDhu">INSTAGRAM</a></li>
+                    <li><a href="#">SNAPCHAT</a></li>
+
+                </ul>
+            </li>
+        </ul>
+        <div class="auth-buttons">
+            <button id="regBtn"><a href="form-1.html">Register/login </a></button>
+        </div>
+    </nav>
+
+    
+
+   
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <p>Welcome to my portfolio</p>
+                
+                
+                    <br> <p> Hello! </p> 
+                    
+                    
+          <p> I am Priti Rawat_____________</p>
+        
+        </div><div class="mySlides fade">
+            <p>About me______</p> 
+           <p>I'm currently pursuing my studies in Medhavi Skill UNiversity.______</p>
+             
+              <p>Academic Journey: I attend RSSS, +2 where I’m majoring in Information Technology. Whether it’s diving into complex algorithms or designing user-friendly interfaces.</p>
+            Interests and Hobbies:
+            Coding Enthusiast: When I’m not buried in textbooks, you’ll find me coding away. I love turning ideas into functional software and solving real-world problems.
+            Nature Lover: Exploring the outdoors rejuvenates me. Hiking, camping, and capturing scenic landscapes with my camera are my go-to activities.
+        </p>
+        </div>
+
+        
+        <div class="mySlides fade">
+            <p>Check out my projects</p>
+            <p>Cyber security
+            </p> 
+            <p>Cybersecurity refers to any technology, measure, or practice for preventing cyberattacks or mitigating their impact. It aims to protect individuals’ and organizations’ systems, applications, computing devices, sensitive data, and financial assets against computer viruses, sophisticated ransomware attacks, and other digital threats1. In essence, cybersecurity is the art of safeguarding networks, devices, and data from unauthorized access or criminal use while ensuring the confidentiality, integrity, and availability of information</p>
+
+            </div>
+
+            <div class="mySlides fade">
+                <p>Contact me for collaboration</p>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="image.jpeg" alt="Profile Picture">
+        </div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-section">
+            <h4>About</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>My Project</h4>
+            <ul>
+                <li><a href="#">Project 1</a></li>
+                <li><a href="#">Project 2</a></li>
+                <li><a href="#">Project 3</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Blogs</h4>
+            <ul>
+                <li><a href="#">Latest Posts</a></li>
+                <li><a href="#">Popular Posts</a></li>
+                <li><a href="#">Archived Posts</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Social</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    
+    
+    <div class="google-map">
+        <!-- Add Google Map iframe -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28640.219204049847!2d88.49429801692364!3d27.233819805244276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374916081b3950b9%3A0x9d0551192a8e5458!2sSingtam%20Sankhola!5e0!3m2!1sen!2sin!4v1645526678608!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    let imageIndex = 0;
+    let textIndex = 0;
+    const images = document.querySelectorAll('#imageCarousel img');
+    const textSlides = document.querySelectorAll('#textCarousel .text-slide');
+
+    function showNextImage() {
+        images[imageIndex].classList.remove('active');
+        imageIndex = (imageIndex + 1) % images.length;
+        images[imageIndex].classList.add('active');
+    }
+
+    function showNextText() {
+        textSlides[textIndex].classList.remove('active');
+        textIndex = (textIndex + 1) % textSlides.length;
+        textSlides[textIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 3000); // Change image every 3 seconds
+    setInterval(showNextText, 3000); // Change text every 3 seconds
+</script>
+
+
+    <script src="script1.js"></script>
+</body>
+</html>
